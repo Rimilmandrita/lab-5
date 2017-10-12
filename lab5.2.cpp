@@ -33,6 +33,16 @@ float mean_array(int a[],int n)
 }
 float median_array(int a[],int n)
 {  float m;
+int i,j,temp;
+for(i=0;i<n;i++)
+	 { for(j=i+1;j<n;j++)
+	 { if (a[i]>a[j])
+	      { temp=a[i];
+	       a[i]=a[j];
+	       a[j]=temp;}
+	       else a[i]=a[i];//array is sorted in increasing order.
+	 	
+	 }}
 if(n%2==0)
  { m=(a[n/2]+a[(n-2)/2]);
   return m/2;	
